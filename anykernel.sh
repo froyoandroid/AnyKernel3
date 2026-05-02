@@ -26,42 +26,19 @@ no_block_display=1;
 # import functions/variables and setup patching - see for reference (DO NOT REMOVE)
 . tools/ak3-core.sh;
 
-## AnyKernel install
-# Banner ASCII
-draw_banner() {
-ui_print " "
-ui_print "  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
-ui_print "  ⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠛⠋⠉⠉⠙⠛⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿"
-ui_print "  ⣿⣿⣿⣿⣿⣿⢿⣿⡇⠀⠀⠀⣀⣀⠀⠀⠀⠀⠈⠛⢿⣿⣿⣿⣿⣿"
-ui_print "  ⣿⣿⣿⣿⡟⠁⢸⣿⡇⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠻⣿⣿⣿⣿"
-ui_print "  ⣿⣿⣿⠏⠀⠀⢸⣿⡇⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿"
-ui_print "  ⣿⣿⡿⠀⠀⠀⢸⣿⡇⠀⠀⠀⣿⣿⠀⠀⠀⢠⣤⡄⠀⠀⠀⢻⣿⣿"
-ui_print "  ⣿⣿⡇⠀⠀⠀⢸⣿⡇⠀⠀⠀⣿⣿⠀⠀⠀⢸⣿⡇⠀⠀⠀⢸⣿⣿"
-ui_print "  ⣿⣿⡇⠀⠀⠀⢸⣿⡇⠀⠀⠀⣿⣿⠀⠀⠀⢸⣿⡇⠀⠀⠀⢸⣿⣿"
-ui_print "  ⣿⣿⣿⠀⠀⠀⠘⠛⠃⠀⠀⠀⣿⣿⠀⠀⠀⢸⣿⡇⠀⠀⠀⣼⣿⣿"
-ui_print "  ⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⢸⣿⡇⠀⠀⣰⣿⣿⣿"
-ui_print "  ⣿⣿⣿⣿⣧⡀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⢸⣿⡇⢀⣴⣿⣿⣿⣿"
-ui_print "  ⣿⣿⣿⣿⣿⣿⣦⣀⠀⠀⠀⠀⠉⠉⠀⠀⠀⢸⣿⣷⣿⣿⣿⣿⣿⣿"
-ui_print "  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣤⣤⣤⣤⣤⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿"
-ui_print "  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"
-ui_print " "
-ui_print "             ALL IS OURS"
-ui_print " "
-}
-draw_banner
 
-ui_print "• Initializing installation..."
+ui_print "Initializing installation..."
 split_boot;
 
-ui_print "• Flashing kernel image..."
+ui_print "Flashing kernel image..."
 flash_boot;
 
 if [ -f "dtbo.img" ]; then
-  ui_print "• Flashing DTBO image..."
+  ui_print "Flashing DTBO image..."
   flash_dtbo;
 fi
 
-ui_print "• Installation complete!"
+ui_print "Installation complete!"
 ## end boot install
 
 

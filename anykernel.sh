@@ -27,13 +27,31 @@ NO_BLOCK_DISPLAY=1;
 . tools/ak3-core.sh;
 
 
-ui_print "Initializing installation..."
+ui_print " ";
+ui_print '                __   __';
+ui_print '               /  \ /  \';
+ui_print '          .--. \   V   / .--.';
+ui_print "         (    '-\\  |  /-'    )";
+ui_print "          '--._  (*@*)  _.--'";
+ui_print '               /`  |  `\';
+ui_print "              (__.'|'.__)";
+ui_print '                   |';
+ui_print '          .-.      |';
+ui_print '         (   )_    |    _.-.';
+ui_print "          '-.  '-. | .-'   )";
+ui_print "             '-._ \\|/ _.-'";
+ui_print "                 '-|-'";
+ui_print '                   |';
+ui_print " ";
+ui_print "  P R O J E C T   H A I L   M A R Y";
+ui_print "     chopin  -  4.19  -  firenza2099";
+ui_print "  ---------------------------------";
+ui_print " ";
+ui_print "  [1/2] Unpacking boot image...";
 split_boot;
 
-ui_print "Flashing kernel image..."
+ui_print "  [2/2] Flashing kernel + dtb...";
 flash_boot;
-
-ui_print "Installation complete!"
 ## end boot install
 
 

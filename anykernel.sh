@@ -17,11 +17,11 @@ supported.vendorpatchlevels=
 '; } # end properties
 
 # boot shell variables
-block=boot;
-is_slot_device=auto;
-ramdisk_compression=auto;
-patch_vbmeta_flag=auto;
-no_block_display=1;
+BLOCK=boot;
+IS_SLOT_DEVICE=auto;
+RAMDISK_COMPRESSION=auto;
+PATCH_VBMETA_FLAG=auto;
+NO_BLOCK_DISPLAY=1;
 
 # import functions/variables and setup patching - see for reference (DO NOT REMOVE)
 . tools/ak3-core.sh;
@@ -32,11 +32,6 @@ split_boot;
 
 ui_print "Flashing kernel image..."
 flash_boot;
-
-if [ -f "dtbo.img" ]; then
-  ui_print "Flashing DTBO image..."
-  flash_dtbo;
-fi
 
 ui_print "Installation complete!"
 ## end boot install

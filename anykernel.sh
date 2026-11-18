@@ -52,6 +52,10 @@ split_boot;
 
 ui_print "  [2/2] Flashing kernel + dtb...";
 flash_boot;
+
+ui_print " ";
+ui_print "  Fist my bump.";
+ui_print " ";
 ## end boot install
 
 
